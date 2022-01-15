@@ -1,6 +1,7 @@
 import React from 'react';
 import {Box, Button, Heading, Paragraph} from 'grommet';
 import {Archive, Edit} from 'grommet-icons';
+import MetamaskButton from '../components/Buttons/MetamaskButton';
 
 function Home() {
   return (
@@ -15,7 +16,7 @@ function Home() {
         </Box>
         <Box direction="column" basis="1/2" pad="xlarge">
           <Box basis="small">
-            <Button primary color="white" alignSelf="end" label="Connect Metamask" />
+            <MetamaskButton />
           </Box>
 
           <Box flex="grow" align="center" alignSelf="center" alignContent="center" gap="medium" justify="center">

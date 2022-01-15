@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {MetamaskStateProvider} from 'use-metamask';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <MetamaskStateProvider>
     <App />
-  </React.StrictMode>,
+  </MetamaskStateProvider>,
   document.getElementById('root')
 );
 
