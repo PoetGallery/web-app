@@ -33,7 +33,7 @@ export const isRegistered = async (userAddress) => {
 };
 
 export const createRoom = async (archetype, totalParticipants) => {
-  const contract = await Web3ContractProvider(provess.env.REACT_APP_ROOM_FACTORY_ADDRESS, RoomFactoryAbi);
+  const contract = await Web3ContractProvider(process.env.REACT_APP_ROOM_FACTORY_ADDRESS, RoomFactoryAbi);
 
   const createTx = await contract.deployRoom(
     archetype,
@@ -53,7 +53,7 @@ export const createRoom = async (archetype, totalParticipants) => {
 }
 
 export const getRooms = async () => {
-  const contract = await Web3ContractProvider(provess.env.REACT_APP_ROOM_FACTORY_ADDRESS, RoomFactoryAbi);
+  const contract = await Web3ContractProvider(process.env.REACT_APP_ROOM_FACTORY_ADDRESS, RoomFactoryAbi);
   const rooms = await contract.getAllRooms();
   return rooms;
 };
