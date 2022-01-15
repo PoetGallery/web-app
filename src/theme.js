@@ -6,6 +6,12 @@ const theme = {
       height: '20px',
     },
   },
+  formField: {
+    help: {
+      color: 'white',
+      margin: {bottom: 'medium'},
+    },
+  },
 };
 
 export default theme;

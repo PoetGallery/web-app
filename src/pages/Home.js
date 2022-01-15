@@ -5,7 +5,7 @@ import MetamaskButton from '../components/Buttons/MetamaskButton';
 
 function Home() {
   return (
-      <Box direction="row" flex="grow" background={{color: '#5867a8'}} height="100vh">
+      <Box direction="row" flex="grow" height="100vh">
         <Box flex="grow" basis="1/2" align="center" alignSelf="center" border={{color: "white", side: "right"}}>
           <Heading alignSelf="center">PoetGallery</Heading>
           <Box pad="large" background={{color: 'white'}} alignSelf="center" margin="xlarge">
@@ -20,7 +20,7 @@ function Home() {
           </Box>
 
           <Box flex="grow" align="center" alignSelf="center" alignContent="center" gap="medium" justify="center">
-            <Button fill="horizontal" primary color="white" reverse label="Start Creating" size="large" icon={<Edit />} />
+            <Button href="/option" fill="horizontal" primary color="white" reverse label="Start Creating" size="large" icon={<Edit />} />
             <Button fill="horizontal" primary color="white" reverse label="Explore Marketplace" size="large" icon={<Archive />} />
           </Box>
 
