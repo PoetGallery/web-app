@@ -8,8 +8,21 @@ function SignUp() {
   const [avatar, setAvatar] = useState(null);
 
   async function signup() {
-    console.log(avatar);
-    // window.location.href= "/";
+
+    await changeNetwork();
+    await window.ethereum.request({ method: 'eth_requestAccounts' });
+    
+    const metadata = await storeMetadata({
+      name: nickname,
+      description: "This is a user profile json",
+      image: avatar
+    });
+
+    await createUser(`https://ipfs.io/ipfs/${metadata.ipnft}/metadata.json`, type == 'poet' ? 2 : 1);
+
+    localStorage.setItem('role', type == 'poet' ? 2 : 1)
+    localStorage.setItem('username', nickname);
+    localStorage.setItem('avatar', `https://ipfs.io/ipfs/${metadata.data.image.pathname.replace('//', '')}`);
   }
 
   return (
