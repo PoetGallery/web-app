@@ -1,13 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {MetamaskStateProvider} from 'use-metamask';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <MetamaskStateProvider>
-    <App />
-  </MetamaskStateProvider>,
+    <App />,
   document.getElementById('root')
 );
 
