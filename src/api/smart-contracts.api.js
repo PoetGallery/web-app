@@ -7,7 +7,7 @@ export const createUser = async (
   uri,
   role
 ) => {
-  const contract = await Web3ContractProvider(provess.env.REACT_APP_POET_GALLERY_USER_ADDRESS, PoetGalleryUserAbi);
+  const contract = await Web3ContractProvider(process.env.REACT_APP_POET_GALLERY_USER_ADDRESS, PoetGalleryUserAbi);
 
   const createTx = await contract.createUser(
     uri,
@@ -19,7 +19,7 @@ export const createUser = async (
   const event = events.find((e) => e.event === 'UserCreated');
 
   if (event) {
-    return
+    return;
   } else {
     throw Error('Something went wrong!');
   }
@@ -27,7 +27,7 @@ export const createUser = async (
 
 
 export const isRegistered = async (userAddress) => {
-  const contract = await Web3ContractProvider(provess.env.REACT_APP_POET_GALLERY_USER_ADDRESS, PoetGalleryUserAbi);
+  const contract = await Web3ContractProvider(process.env.REACT_APP_POET_GALLERY_USER_ADDRESS, PoetGalleryUserAbi);
   const result = await contract.isUser(userAddress);
   return result;
 };
