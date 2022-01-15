@@ -1,6 +1,5 @@
 import React from 'react';
-import {Grommet} from 'grommet';
-import theme from './theme';
+import Layout from './components/Layout/Main'
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Home from './pages/Home';
 import Test from './pages/Test';
@@ -8,7 +7,7 @@ import NoPage from './pages/NoPage';
 
 function App() {
   return (
-      <Grommet theme={theme}>
+      <Layout>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home/>}/>
@@ -16,7 +15,7 @@ function App() {
             <Route path="*" element={<NoPage/>}/>
           </Routes>
         </BrowserRouter>
-      </Grommet>
+      </Layout>
   );
 }
 
