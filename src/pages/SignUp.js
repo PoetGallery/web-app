@@ -14,21 +14,17 @@ function SignUp() {
 
     await changeNetwork();
     await window.ethereum.request({ method: 'eth_requestAccounts' });
-
-    const uri = await storeMetadata({
+    
+    const metadata = await storeMetadata({
       name: nickname,
       description: "This is a user profile json",
       image: avatar
     });
-    console.log(uri);
 
-    await createUser(uri, type == 'poet' ? 2 : 1);
-    console.log('Success');
+    await createUser(`https://ipfs.io/ipfs/${metadata.ipnft}/metadata.json`, type == 'poet' ? 2 : 1);
 
-    const a = await isRegistered(window.ethereum.selectedAddress);
-    console.log('isRegistered', a);
-
-    // window.location.href= "/";
+    localStorage.setItem('username', nickname);
+    localStorage.setItem('avatar', `https://ipfs.io/ipfs/${metadata.data.image.pathname.replace('//', '')}`);
   }
 
   return (
