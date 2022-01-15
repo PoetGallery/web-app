@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Box, Button, FileInput, FormField, Heading, Paragraph, TextInput } from 'grommet';
 import { storeMetadata } from '../api/nftStorage.api';
-import { createUser, isRegistered } from '../api/smart-contracts.api';
+import { createUser } from '../api/smart-contracts.api';
 import { changeNetwork } from '../api/web3.provider';
 
 function SignUp() {
@@ -14,7 +14,7 @@ function SignUp() {
 
     await changeNetwork();
     await window.ethereum.request({ method: 'eth_requestAccounts' });
-    
+
     const metadata = await storeMetadata({
       name: nickname,
       description: "This is a user profile json",
@@ -23,8 +23,10 @@ function SignUp() {
 
     await createUser(`https://ipfs.io/ipfs/${metadata.ipnft}/metadata.json`, type == 'poet' ? 2 : 1);
 
+    localStorage.setItem('role', type == 'poet' ? 2 : 1)
     localStorage.setItem('username', nickname);
     localStorage.setItem('avatar', `https://ipfs.io/ipfs/${metadata.data.image.pathname.replace('//', '')}`);
+
   }
 
   return (
