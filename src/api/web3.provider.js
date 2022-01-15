@@ -1,4 +1,4 @@
-import { ContractInterface, ethers } from 'ethers';
+import { ethers } from 'ethers';
 
 export const changeNetwork = async () => {
   try {

@@ -1,26 +1,23 @@
-import React from 'react';
-import {Button} from 'grommet';
-import {useMetamask} from 'use-metamask';
-import {ethers} from 'ethers';
+import React, { useState, useEffect } from 'react';
+import { Button } from 'grommet';
+import { changeNetwork } from '../../api/web3.provider';
 
 function MetamaskButton() {
-  const {connect, metaState} = useMetamask();
-  const provider = new ethers.providers.Web3Provider(window.ethereum);
+  const [disabled, setDisabled] = useState(false);
+  const { ethereum } = window;
 
-  function connectMetamask(e){
-    if (metaState.isAvailable && !metaState.isConnected) {
-      (async () => {
-        try {
-          await connect(ethers.providers.Web3Provider, 'any');
-        } catch (error) {
-          console.log(error);
-        }
-      })();
-    }
+  useEffect(() => {
+    setDisabled(window.ethereum.selectedAddress != undefined);
+  }, []);
+
+  async function connectMetamask(e) {
+    await changeNetwork();
+    await ethereum.request({ method: 'eth_requestAccounts' });
+    setDisabled(window.ethereum.selectedAddress != undefined);
   }
 
   return (
-      <Button disabled={metaState.isConnected} primary color="white" alignSelf="end" label="Connect Metamask" onClick={connectMetamask}/>
+    <Button disabled={disabled} primary color="white" alignSelf="end" label="Connect Metamask" onClick={connectMetamask} />
   );
 }
 
