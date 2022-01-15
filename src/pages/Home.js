@@ -10,7 +10,14 @@ function Home() {
           <Heading alignSelf="center">PoetGallery</Heading>
           <Box pad="large" background={{color: 'white'}} alignSelf="center" margin="xlarge">
             <Paragraph margin="medium" responsive={true} fill={true} alignSelf="center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fermentum velit lacus, lobortis pharetra arcu pellentesque eget. Pellentesque eu nibh sed ipsum aliquet luctus. Suspendisse blandit leo et velit dapibus imperdiet. Sed sed cursus sem, eget egestas massa. Curabitur nibh tortor, tincidunt ut magna ut, tristique congue eros. Curabitur et dui leo. Nunc odio elit, interdum eu facilisis consequat, ultrices eget dolor. Donec ac mauris ac turpis volutpat dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra dapibus blandit. Fusce porttitor erat urna, non sagittis turpis rutrum ut. Suspendisse eu tortor risus. Sed mollis, ante nec ultricies bibendum, elit enim laoreet enim, vel aliquet ipsum massa in augue. Fusce condimentum arcu eu sollicitudin pellentesque. Ut nunc nisl, consequat eget lobortis sed, vehicula id augue. Sed eleifend tempus augue non facilisis.
+
+            PoetGallery is the first decentralized NFT Marketplace for Collective Poetry.  
+<br/>
+<br/>
+Artists and Poets co-create a shared Poetry Collection, of which they have full ownership, and whose royalties are shared amongst all the contributors.
+<br/>
+<br/>
+Inspired by “Le Cadavre Exquisite” - it’s a creative experiment where each participant contributes to a collective poem, writing 3 lines of poetry, and reading only the last one before theirs, till the completion of the poem.
             </Paragraph>
           </Box>
         </Box>
