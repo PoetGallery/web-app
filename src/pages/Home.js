@@ -5,13 +5,13 @@ import MetamaskButton from '../components/Buttons/MetamaskButton';
 
 function Home() {
   return (
-      <Box direction="row" flex="grow" height="100vh">
+      <Box direction="row" flex="grow" height="100vh" background="brand">
         <Box flex="grow" basis="1/2" align="center" alignSelf="center" border={{color: "white", side: "right"}}>
           <Heading alignSelf="center">PoetGallery</Heading>
           <Box pad="large" background={{color: 'white'}} alignSelf="center" margin="xlarge">
             <Paragraph margin="medium" responsive={true} fill={true} alignSelf="center">
 
-            PoetGallery is the first decentralized NFT Marketplace for Collective Poetry.  
+            PoetGallery is the first decentralized NFT Marketplace for Collective Poetry.
 <br/>
 <br/>
 Artists and Poets co-create a shared Poetry Collection, of which they have full ownership, and whose royalties are shared amongst all the contributors.

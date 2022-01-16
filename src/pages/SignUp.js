@@ -30,7 +30,7 @@ function SignUp() {
   }
 
   return (
-    <Box direction="row" flex="grow" height="100vh">
+    <Box direction="row" flex="grow" height="100vh" background="brand">
       <Box flex="grow" basis="1/2" align="center" alignSelf="center" border={{ color: 'white', side: 'right' }}>
         <Heading alignSelf="center">Welcome, {type === 'poet' ? 'poet' : 'artist'}</Heading>
         <Box pad="large" background={{ color: 'white' }} alignSelf="center" margin="xlarge">

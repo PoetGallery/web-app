@@ -5,7 +5,7 @@ import {Grommet, Main} from 'grommet';
 function MainLayout(props) {
   return (
       <Grommet theme={theme}>
-        <Main background={{color: '#001626'}}>
+        <Main>
           {props.children}
         </Main>
       </Grommet>

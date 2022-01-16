@@ -3,7 +3,8 @@ import Layout from './components/Layout/Main'
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Home from './pages/Home';
 import Option from './pages/Option';
-import SignUp from './pages/SignUp'
+import SignUp from './pages/SignUp';
+import Rooms from './pages/Rooms';
 import NoPage from './pages/NoPage';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
             <Route path="/" element={<Home/>}/>
             <Route path="/option" element={<Option/>}/>
             <Route path="/signup/:type" element={<SignUp/>}/>
+            <Route path="/rooms" element={<Rooms/>}/>
             <Route path="*" element={<NoPage/>}/>
           </Routes>
         </BrowserRouter>

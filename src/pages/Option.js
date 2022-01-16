@@ -3,7 +3,7 @@ import { Box, Button, Paragraph } from 'grommet';
 
 function Option() {
   return (
-    <Box direction="row" flex="grow" height="100vh">
+    <Box direction="row" flex="grow" height="100vh" background="brand">
       <Box flex="grow" basis="1/2" align="center" alignSelf="center" border={{ color: 'white', side: 'right' }}>
         <Box pad="large" background={{ color: 'white' }} alignSelf="center" margin="xlarge">
           <Paragraph margin="medium" responsive={true} fill={true} alignSelf="center">
