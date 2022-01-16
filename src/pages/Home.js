@@ -28,7 +28,7 @@ Inspired by “Le Cadavre Exquisite” - it’s a creative experiment where each
 
           <Box flex="grow" align="center" alignSelf="center" alignContent="center" gap="medium" justify="center">
             <Button href="/option" fill="horizontal" primary color="white" reverse label="Start Creating" size="large" icon={<Edit />} />
-            <Button fill="horizontal" primary color="white" reverse label="Explore Marketplace" size="large" icon={<Archive />} />
+            <Button href="/marketplace" fill="horizontal" primary color="white" reverse label="Explore Marketplace" size="large" icon={<Archive />} />
           </Box>
 
         </Box>
