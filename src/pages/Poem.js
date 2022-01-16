@@ -18,7 +18,7 @@ function Poem() {
   const emptyLines = [];
 
   for (let i = 1; i < numberOfLines; i++) {
-    emptyLines.push(<li></li>);
+    emptyLines.push(<li><TextInput disabled={true} /></li>);
   }
 
   function tick(time) {
@@ -45,13 +45,13 @@ function Poem() {
             </Sidebar>
           </Box>
           <Box basis="full" margin="medium">
-            <Heading>{title}</Heading>
+            <Heading margin="small">{title}</Heading>
             <Line />
             <Box fill="horizontal" flex="grow" direction="row-responsive">
               <Box fill="horizontal">
                 <ol>
                   {emptyLines}
-                  <li>{lastLine}</li>
+                  <li><TextInput disabled={true} value={lastLine}/></li>
                   <li>
                     <TextInput
                         placeholder="Add your line"
@@ -75,7 +75,7 @@ function Poem() {
                   </li>
                 </ol>
               </Box>
-              <Box basis="small">
+              <Box align="center" basis="medium">
                 <Clock run={run} time="T00:05:00" type="digital" onChange={tick}/>
               </Box>
             </Box>

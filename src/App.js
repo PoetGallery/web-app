@@ -8,6 +8,7 @@ import Rooms from './pages/Rooms';
 import Poem from './pages/Poem';
 import NewRoom from './pages/NewRoom';
 import Archetypes from './pages/Archetypes';
+import Marketplace from './pages/Marketplace';
 import NoPage from './pages/NoPage';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Route path="/rooms/new" element={<NewRoom/>}/>
             <Route path="/poem/:id" element={<Poem/>}/>
             <Route path="/archetypes" element={<Archetypes/>}/>
+            <Route path="/marketplace" element={<Marketplace/>}/>
             <Route path="*" element={<NoPage/>}/>
           </Routes>
         </BrowserRouter>
