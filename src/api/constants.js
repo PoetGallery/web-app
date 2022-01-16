@@ -1,31 +1,15 @@
-export const Archetype = {
-    NONE: 0,
-    Utopian: 1,
-    RegularGuy: 2,
-    Hero: 3,
-    Rebel: 4,
-    Explorer: 5,
-    Creator: 6,
-    Ruler: 7,
-    Magician: 8,
-    Lover: 9,
-    Caregiver: 10,
-    Jester: 11,
-    Sage: 12
-}
 
-export const Archetypes = [
-    {name: "NONE", id: 0, description: ""},
-    {name: "Utopian", id: 1, description: ""},
-    {name: "RegularGuy", id: 2, description: ""},
-    {name: "Hero", id: 3, description: ""},
-    {name: "Outlaw", id: 4, description: ""},
-    {name: "Explorer", id: 5, description: ""},
-    {name: "Creator", id: 6, description: ""},
-    {name: "Ruler", id: 7, description: ""},
-    {name: "Magician", id: 8, description: ""},
-    {name: "Lover", id: 9, description: ""},
-    {name: "Caregiver", id: 10, description: ""},
-    {name: "Jester", id: 11, description: ""},
-    {name: "Sage", id: 12, description: ""}
-]
+export const ArchetypesList = {
+    1: { name: "The Naive", id: 1, description: "", image: "/archetypes/Creator.png" },
+    2: { name: "RegularGuy", id: 2, description: "", image: "/archetypes/RegularGuy.png" },
+    3: { name: "Hero", id: 3, description: "", image: "/archetypes/Superhero.png" },
+    4: { name: "Rebel", id: 4, description: "", image: "/archetypes/Rebel.png" },
+    5: { name: "Lover", id: 5, description: "", image: "/archetypes/Lover.png" },
+    6: { name: "Supporter", id: 6, description: "", image: "/archetypes/Supporter.png" },
+    7: { name: "Explorer", id: 7, description: "", image: "/archetypes/Explorer.png" },
+    8: { name: "Creator", id: 8, description: "", image: "/archetypes/Creator.png" },
+    9: { name: "Ruler", id: 9, description: "", image: "/archetypes/Ruler.png" },
+    10: { name: "Visionary", id: 10, description: "", image: "/archetypes/Visionary.png" },
+    11: { name: "Joker", id: 11, description: "", image: "/archetypes/Joker.png" },
+    12: { name: "Rationalist", id: 12, description: "", image: "/archetypes/Rationalist.png" }
+}

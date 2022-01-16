@@ -7,7 +7,7 @@ function Room(props) {
         <Box height="small" margin="small" round="medium" border={{color: 'brand', size: 'small', side: 'all'}} align="center">
           <p>{props.name}</p>
           <p>#{props.id}</p>
-          <p>{props.capacity} Poets</p>
+          <p>{props.currentParticipants}/{props.totalParticipants} Poets</p>
         </Box>
       </Box>
   );

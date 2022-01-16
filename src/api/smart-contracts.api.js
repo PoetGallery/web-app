@@ -60,17 +60,17 @@ export const getRooms = async () => {
 
 export const getRoomTotalParticipantsAmount = async (roomAddress) => {
   const contract = await Web3ContractProvider(roomAddress, RoomAbi);
-  return await contract.totalParticipants();
+  return (await contract.totalParticipants()).toString();
 }
 
 export const getRoomCurrentParticipantsAmount = async (roomAddress) => {
   const contract = await Web3ContractProvider(roomAddress, RoomAbi);
-  return await contract.currentParticipantsAmount();
+  return (await contract.currentParticipantsAmount()).toString();
 
 }
 
 export const getRoomArchetype = async (roomAddress) => {
   const contract = await Web3ContractProvider(roomAddress, RoomAbi);
-  return await contract.archetype();
+  return (await contract.archetype()).toString();
 
 }
