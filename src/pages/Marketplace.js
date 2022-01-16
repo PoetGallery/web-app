@@ -50,13 +50,30 @@ function Marketplace() {
         {modalVisible && (
             <Layer onEsc={() => setModalVisible(false)}
                    onClickOutside={() => setModalVisible(false)}>
-              <Box pad="medium" width="large" background="brand" basis="large">
+              <Box pad="medium" width="large" background="brand">
                 <Box gap="medium" direction="row">
                   <Box basis="1/2">
-                    <Image fit="cover" src={selectedItem.image}/>
+                    <MarketplaceItem
+                        title={selectedItem.name}
+                        description={selectedItem.description}
+                        image={selectedItem.image}
+                    />
                   </Box>
-                  <Box basis="1/2">
-                    <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Paragraph>
+                  <Box basis="1/2" justify="center">
+                    <Paragraph>
+                      terrified again <br/>
+                      of not loving <br/>
+                      of loving and not you <br/>
+                      of being loved and not by you <br/>
+                      of knowing not knowing <br/>
+                      pretending <br/>
+                      I and all the others <br/>
+                      that will love you <br/>
+                      if they love you <br/>
+                      unless they love you <br/>
+                      <br/>
+                      - S. Beckett, Cascando
+                    </Paragraph>
                     <Button label="Mint Poetry Collection" onClick={() => mint()}/>
                   </Box>
                 </Box>
