@@ -25,7 +25,7 @@ function SignUp() {
 
     localStorage.setItem('role', type === 'poet' ? 2 : 1)
     localStorage.setItem('username', nickname);
-    localStorage.setItem('avatar', `https://ipfs.io/ipfs/${metadata.data.image.pathname.replace('//', '')}`);
+    localStorage.setItem('avatar', `https://ipfs.io/ipfs/${metadata.data.image.pathname.replace('//', '').replace(' ', '%20')}`);
 
     window.location = "/archetypes";
   }

@@ -16,7 +16,7 @@ function NavAndSideBar(props) {
 
           <Box gap="medium" align="center" direction="row">
             <Avatar size="medium" fit="cover" src={localStorage.getItem("avatar")}/>
-            <Text>{localStorage.getItem("name")}</Text>
+            <Text>{localStorage.getItem("username")}</Text>
             <MetamaskButton/>
           </Box>
         </Header>
