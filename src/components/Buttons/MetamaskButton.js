@@ -14,6 +14,16 @@ function MetamaskButton(props) {
     await changeNetwork();
     await ethereum.request({ method: 'eth_requestAccounts' });
     setDisabled(window.ethereum.selectedAddress != undefined);
+    const isReg = await isRegistered(window.ethereum.selectedAddress);
+    if (isReg) {
+      const uri = await getUri(window.ethereum.selectedAddress);
+      let userDetails = await axios.get(uri);
+
+      localStorage.setItem('username', userDetails.data.name);
+      localStorage.setItem('avatar', `https://ipfs.io/ipfs/${userDetails.data.image.replace('//', '').replace(' ', '%20')}`);
+
+      window.location = '/archetypes';
+    }
   }
 
   return (

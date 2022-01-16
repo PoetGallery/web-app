@@ -6,7 +6,7 @@ import {useParams} from 'react-router-dom';
 import Line from '../components/Line';
 
 function Poem() {
-  const {id} = useParams();
+  const {roomAddress} = useParams();
   const numberOfLines = 12;
   const title = 'A Monkey Brain in the Void of the World';
   const lastLine = 'Then they saw the world collapse as they were expecting years ago';
@@ -32,6 +32,7 @@ function Poem() {
 
   async function addLines() {
     // need room address
+    
   }
   return (
       <NavAndSideBar>
