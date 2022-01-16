@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import NavAndSideBar from '../components/Layout/NavAndSideBar';
 import {Box, Button, Heading, Image, Layer, Paragraph} from 'grommet';
-import Archetype from '../components/Boxes/Archetype';
+import MarketplaceItem from '../components/Boxes/MarketplaceItem';
 import {ArchetypesList} from '../api/constants';
 import Line from '../components/Line';
 
-function Archetypes() {
-  const [archetype, setArchetype] = useState(localStorage.getItem('selectedArchetype') || 0);
+function Marketplace() {
+
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedItem, setSelectedItem] = useState();
 
@@ -15,25 +15,19 @@ function Archetypes() {
     setModalVisible(true);
   }
 
-  const chooseArchetype = (id) => {
+  function mint() {
     setModalVisible(false);
-    setArchetype(id);
-    localStorage.setItem('selectedArchetype', id);
-  };
+    window.location = 'https://rarible.com/';
+  }
+
   return (
       <NavAndSideBar>
         <Box fill="horizontal" flex="grow" direction="row-responsive">
           <Box>
             <Heading level={2} margin="small">
-              Create Factory
-            </Heading>
-            <Heading level={3} margin="small">
-              where everything happens
+              Marketplace
             </Heading>
             <Line/>
-            <Paragraph fill={true} margin="small">
-              Join a Room, or create your own - and start your Collective Poem!
-            </Paragraph>
           </Box>
         </Box>
         <Box
@@ -44,34 +38,24 @@ function Archetypes() {
         >
           {Object.entries(ArchetypesList).map((el, key) => {
             const element = el[1];
-            return <Archetype
-                name={element.name}
+            return <MarketplaceItem
+                title={element.name}
                 id={key}
-                description={element.description}
+                description="test"
                 image={element.image}
-                selected={archetype == element.id}
                 onClick={() => selectItem(element)}
             />;
           })}
         </Box>
-        <Button
-            href="/rooms"
-            primary
-            margin="small"
-            size="large"
-            align="center"
-            alignSelf="center"
-            label="Next: Join a room"
-        />
         {modalVisible && (
             <Layer onEsc={() => setModalVisible(false)}
                    onClickOutside={() => setModalVisible(false)}>
               <Box pad="medium" width="large" background="brand">
                 <Box gap="medium" direction="row">
                   <Box basis="1/2">
-                    <Archetype
-                        name={selectedItem.name}
-                        id={selectedItem.id}
+                    <MarketplaceItem
+                        title={selectedItem.name}
+                        description={selectedItem.description}
                         image={selectedItem.image}
                     />
                   </Box>
@@ -90,7 +74,7 @@ function Archetypes() {
                       <br/>
                       - S. Beckett, Cascando
                     </Paragraph>
-                    <Button primary label="Use This Archetype" onClick={() => chooseArchetype(selectedItem.id)}/>
+                    <Button label="Mint Poetry Collection" onClick={() => mint()}/>
                   </Box>
                 </Box>
               </Box>
@@ -100,4 +84,4 @@ function Archetypes() {
   );
 }
 
-export default Archetypes;
+export default Marketplace;

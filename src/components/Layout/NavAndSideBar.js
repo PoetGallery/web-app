@@ -6,11 +6,10 @@ function NavAndSideBar(props) {
   return (
       <Box>
         <Header align="center" alignContent="center" direction="row" pad="medium" background="brand">
-
-          <Box height="xxsmall" width="small">
+          <Box height="xxsmall" width="xxsmall">
             <Image
                 fit="contain"
-                src="/logo_light.svg"
+                src="/logo.png"
             />
           </Box>
 

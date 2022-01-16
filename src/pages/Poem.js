@@ -23,7 +23,7 @@ function Poem() {
   const emptyLines = [];
 
   for (let i = 1; i < numberOfLines; i++) {
-    emptyLines.push(<li></li>);
+    emptyLines.push(<li><TextInput disabled={true} /></li>);
   }
 
   function tick(time) {

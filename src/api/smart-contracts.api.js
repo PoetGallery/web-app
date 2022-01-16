@@ -33,6 +33,11 @@ export const isRegistered = async (userAddress) => {
   return result;
 };
 
+export const getUri = async (userAddress) => {
+  const contract = await Web3ContractProvider(process.env.REACT_APP_POET_GALLERY_USER_ADDRESS, PoetGalleryUserAbi);
+  const result = await contract.memberToUri(userAddress);
+  return result;
+};
 export const createRoom = async (archetype, totalParticipants) => {
   const contract = await Web3ContractProvider(process.env.REACT_APP_ROOM_FACTORY_ADDRESS, RoomFactoryAbi);
 

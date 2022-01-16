@@ -13,6 +13,7 @@ function MetamaskButton(props) {
   }, []);
 
   async function connectMetamask(e) {
+    localStorage.clear();
     await changeNetwork();
     await ethereum.request({ method: 'eth_requestAccounts' });
     setDisabled(window.ethereum.selectedAddress != undefined);

@@ -3,8 +3,8 @@ import {Box, Text} from 'grommet';
 
 function Line(props) {
   return (
-      <Box alignSelf="start">
-        <hr width="200" />
+      <Box alignSelf="start" margin="small">
+        <hr width="100" />
       </Box>
   );
 }
