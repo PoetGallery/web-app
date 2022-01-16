@@ -1,19 +1,26 @@
 import React from 'react';
-import {Avatar, Box, Header, Heading, Sidebar, Text} from 'grommet';
-import MetamaskButton from '../Buttons/MetamaskButton'
+import {Avatar, Box, Header, Image, Sidebar, Text} from 'grommet';
+import MetamaskButton from '../Buttons/MetamaskButton';
 
 function NavAndSideBar(props) {
   return (
       <Box>
         <Header align="center" alignContent="center" direction="row" pad="medium" background="brand">
-          <Heading margin="small" level={2}>Poet Gallery</Heading>
+
+          <Box height="xsmall" width="small">
+            <Image
+                fit="contain"
+                src="logo_light.svg"
+            />
+          </Box>
+
           <Box gap="medium" align="center" direction="row">
-            <Avatar size="medium" fit="cover" src="alex.jpg" />
+            <Avatar size="medium" fit="cover" src="alex.jpg"/>
             <Text>Jabyl</Text>
-            <MetamaskButton />
+            <MetamaskButton/>
           </Box>
         </Header>
-        <Box direction="row" >
+        <Box direction="row">
           <Sidebar basis="medium" background="brand">
             <p>test</p>
             <p>test</p>
