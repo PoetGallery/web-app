@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Box, Button, FileInput, FormField, Heading, Paragraph, TextInput } from 'grommet';
-import { storeMetadata } from '../api/nftStorage.api';
+import { storeNFTMetadata } from '../api/nftStorage.api';
 import { createUser } from '../api/smart-contracts.api';
 import { changeNetwork } from '../api/web3.provider';
 
@@ -15,7 +15,7 @@ function SignUp() {
     await changeNetwork();
     await window.ethereum.request({ method: 'eth_requestAccounts' });
 
-    const metadata = await storeMetadata({
+    const metadata = await storeNFTMetadata({
       name: nickname,
       description: "This is a user profile json",
       image: avatar

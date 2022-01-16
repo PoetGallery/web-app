@@ -48,12 +48,11 @@ function Rooms() {
         </Box>
       </Box>
       <Box wrap={true} fill="horizontal" direction="row-responsive" basis="full">
-        <Room name="test" id={1} currentParticipants={4} totalParticipants={6} />
         {
           rooms && rooms.map(room => {
             if (room)
               return (
-                <Room name={room.name} id={room.id} currentParticipants={room.currentParticipants} totalParticipants={room.totalParticipants} roomAddress={room.address} />
+                <Room name={room.name} id={room.id} currentParticipants={room.currentParticipants} totalParticipants={room.totalParticipants} address={room.address} />
               )
           })
         }
