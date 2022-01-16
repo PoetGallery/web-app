@@ -1,7 +1,7 @@
 import React from 'react';
 import NavAndSideBar from '../components/Layout/NavAndSideBar';
 import {Box, Button, Heading, Paragraph} from 'grommet';
-import Archetype from '../components/Archetype';
+import Archetype from '../components/Boxes/Archetype';
 
 function Archetypes() {
   return (

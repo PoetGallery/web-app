@@ -14,7 +14,7 @@ const theme = {
   },
   formField: {
     help: {
-      color: 'white',
+      color: {dark: "white"},
       margin: {bottom: 'medium'},
     },
   },

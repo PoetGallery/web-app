@@ -1,7 +1,7 @@
 import React from 'react';
 import NavAndSideBar from '../components/Layout/NavAndSideBar';
 import {Box, Button, Heading, Paragraph} from 'grommet';
-import Room from '../components/Room';
+import Room from '../components/Boxes/Room';
 
 function Rooms() {
   return (
