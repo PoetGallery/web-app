@@ -1,10 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
 import NavAndSideBar from '../components/Layout/NavAndSideBar'
 import { Box, Button, Heading, Paragraph } from 'grommet'
 import Archetype from '../components/Boxes/Archetype'
 import { ArchetypesList } from '../api/constants'
 function Archetypes() {
+  const [archetype, setArchetype] = useState(localStorage.getItem("selectedArchetype")||0);
   const chooseArchetype = (id) => {
+    setArchetype(id);
     localStorage.setItem('selectedArchetype', id)
   }
   return (
@@ -36,7 +38,8 @@ function Archetypes() {
             id={key}
             description={element.description}
             image={element.image}
-            onClick={() => chooseArchetype(el[1].id)}
+            selected={archetype == element.id}
+            onClick={() => chooseArchetype(element.id)}
           />
         })}
       </Box>

@@ -31,15 +31,15 @@ function NewRoom() {
             </FormField>
           </Box>
           <Box basis="1/2">
-            <FormField label="Your cover" help="Choose the Artwork you'd like to have as a Cover of your Collection. Once all poems have been written, the Collection will have the Artwork that received more votes.">
-              {/*<Box height="small" width="medium" overflow="hidden">*/}
-                <Carousel height="400px">
-                  <Image fit="cover" src="//v2.grommet.io/assets/Wilderpeople_Ricky.jpg" />
-                  <Image fit="cover" src="//v2.grommet.io/assets/IMG_4245.jpg" />
-                  <Image fit="cover" src="//v2.grommet.io/assets/IMG_4210.jpg" />
-                </Carousel>
-              {/*</Box>*/}
-            </FormField>
+            {/*<FormField label="Your cover" help="Choose the Artwork you'd like to have as a Cover of your Collection. Once all poems have been written, the Collection will have the Artwork that received more votes.">*/}
+            {/*  /!*<Box height="small" width="medium" overflow="hidden">*!/*/}
+            {/*    <Carousel height="400px">*/}
+            {/*      <Image fit="cover" src="//v2.grommet.io/assets/Wilderpeople_Ricky.jpg" />*/}
+            {/*      <Image fit="cover" src="//v2.grommet.io/assets/IMG_4245.jpg" />*/}
+            {/*      <Image fit="cover" src="//v2.grommet.io/assets/IMG_4210.jpg" />*/}
+            {/*    </Carousel>*/}
+            {/*  /!*</Box>*!/*/}
+            {/*</FormField>*/}
           </Box>
         </Box>
         <Button href="/rooms" primary margin="small" size="large" align="center" alignSelf="center" label="Create your Room"/>

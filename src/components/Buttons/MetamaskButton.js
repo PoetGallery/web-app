@@ -7,13 +7,13 @@ function MetamaskButton(props) {
   const { ethereum } = window;
 
   useEffect(() => {
-    setDisabled(window.ethereum.selectedAddress !== undefined);
+    setDisabled(window.ethereum.selectedAddress != undefined);
   }, []);
 
   async function connectMetamask(e) {
     await changeNetwork();
     await ethereum.request({ method: 'eth_requestAccounts' });
-    setDisabled(window.ethereum.selectedAddress !== undefined);
+    setDisabled(window.ethereum.selectedAddress != undefined);
   }
 
   return (
