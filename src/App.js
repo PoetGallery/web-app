@@ -21,7 +21,7 @@ function App() {
             <Route path="/signup/:type" element={<SignUp/>}/>
             <Route path="/rooms" element={<Rooms/>}/>
             <Route path="/rooms/new" element={<NewRoom/>}/>
-            <Route path="/poem/:id" element={<Poem/>}/>
+            <Route path="/poem/:roomAddress" element={<Poem/>}/>
             <Route path="/archetypes" element={<Archetypes/>}/>
             <Route path="/marketplace" element={<Marketplace/>}/>
             <Route path="*" element={<NoPage/>}/>

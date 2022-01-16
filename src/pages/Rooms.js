@@ -20,7 +20,8 @@ function Rooms() {
             name: 'Name',
             id: 12321,
             totalParticipants: await getRoomTotalParticipantsAmount(roomAddress),
-            currentParticipants: await getRoomCurrentParticipantsAmount(roomAddress)
+            currentParticipants: await getRoomCurrentParticipantsAmount(roomAddress),
+            address: roomAddress
           }
         }
       }));
@@ -52,7 +53,7 @@ function Rooms() {
           rooms && rooms.map(room => {
             if (room)
               return (
-                <Room name={room.name} id={room.id} currentParticipants={room.currentParticipants} totalParticipants={room.totalParticipants} />
+                <Room name={room.name} id={room.id} currentParticipants={room.currentParticipants} totalParticipants={room.totalParticipants} roomAddress={room.address} />
               )
           })
         }
