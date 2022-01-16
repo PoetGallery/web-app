@@ -22,7 +22,6 @@ function Poem() {
   }
 
   function tick(time) {
-    console.log(time);
     if (time === 'T0:0:0') {
       // time is up!
       setDisabled(true);
@@ -31,6 +30,9 @@ function Poem() {
     }
   }
 
+  async function addLines() {
+    // need room address
+  }
   return (
       <NavAndSideBar>
         <Box fill="horizontal" flex="grow" direction="row-responsive">
@@ -77,7 +79,7 @@ function Poem() {
                 <Clock run={run} time="T00:05:00" type="digital" onChange={tick}/>
               </Box>
             </Box>
-            <Button disabled={disabled} href="#" primary margin="small" size="large" align="center" alignSelf="center" label="Add your Lines!"/>
+            <Button disabled={disabled} primary margin="small" size="large" align="center" alignSelf="center" label="Add your Lines!" onClick={addLines}/>
           </Box>
         </Box>
       </NavAndSideBar>
