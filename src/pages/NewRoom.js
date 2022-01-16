@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import NavAndSideBar from '../components/Layout/NavAndSideBar';
-import {Box, Carousel, FormField, Heading, TextInput, Image, Button} from 'grommet';
+import {Box, Button, FormField, Heading, TextInput} from 'grommet';
 import Number from '../components/Boxes/Number';
+import Line from '../components/Line'
 
 function NewRoom() {
   const [name, setName] = useState('');
@@ -12,7 +13,7 @@ function NewRoom() {
           <Box basis="full">
             <Heading level={2} margin="small">New Poet Room</Heading>
             <Heading level={3} margin="small">create your world - reality is yet to be invented</Heading>
-            <hr/>
+            <Line />
           </Box>
 
         </Box>

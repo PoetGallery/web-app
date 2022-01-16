@@ -3,6 +3,7 @@ import NavAndSideBar from '../components/Layout/NavAndSideBar'
 import { Box, Button, Heading, Paragraph } from 'grommet'
 import Archetype from '../components/Boxes/Archetype'
 import { ArchetypesList } from '../api/constants'
+import Line from '../components/Line';
 function Archetypes() {
   const [archetype, setArchetype] = useState(localStorage.getItem("selectedArchetype")||0);
   const chooseArchetype = (id) => {
@@ -19,7 +20,7 @@ function Archetypes() {
           <Heading level={3} margin="small">
             where everything happens
           </Heading>
-          <hr />
+          <Line />
           <Paragraph fill={true} margin="small">
             Join a Room, or create your own - and start your Collective Poem!
           </Paragraph>

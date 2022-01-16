@@ -21,11 +21,11 @@ function NavAndSideBar(props) {
           </Box>
         </Header>
         <Box direction="row">
-          <Sidebar basis="medium" background="brand">
-            <p>test</p>
-            <p>test</p>
-          </Sidebar>
-          <Box pad="medium" basis="full" background="white">
+          {/*<Sidebar basis="medium" background="brand">*/}
+          {/*  <p>test</p>*/}
+          {/*  <p>test</p>*/}
+          {/*</Sidebar>*/}
+          <Box basis="full" background="white">
             {props.children}
           </Box>
         </Box>

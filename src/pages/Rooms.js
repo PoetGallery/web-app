@@ -4,6 +4,7 @@ import { Box, Button, Heading, Paragraph } from 'grommet';
 import Room from '../components/Boxes/Room';
 import { getRooms, getRoomCurrentParticipantsAmount, getRoomTotalParticipantsAmount, getRoomArchetype } from "../api/smart-contracts.api";
 import { ArchetypesList } from '../api/constants';
+import Line from '../components/Line';
 
 function Rooms() {
 
@@ -38,7 +39,7 @@ function Rooms() {
         <Box basis="1/2">
           <Heading level={2} margin="small">Poet Rooms</Heading>
           <Heading level={3} margin="small">{ArchetypesList[localStorage.getItem('selectedArchetype')].name}</Heading>
-          <hr />
+          <Line />
           <Paragraph fill={true} margin="small">Join a Room, or create your own - and start your Collective Poem!</Paragraph>
         </Box>
         <Box basis="1/2" alignContent="center" justify="center">
@@ -46,6 +47,7 @@ function Rooms() {
         </Box>
       </Box>
       <Box wrap={true} fill="horizontal" direction="row-responsive" basis="full">
+        <Room name="test" id={1} currentParticipants={4} totalParticipants={6} />
         {
           rooms && rooms.map(room => {
             if (room)
