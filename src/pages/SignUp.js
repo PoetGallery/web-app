@@ -21,12 +21,13 @@ function SignUp() {
       image: avatar
     });
 
-    await createUser(`https://ipfs.io/ipfs/${metadata.ipnft}/metadata.json`, type == 'poet' ? 2 : 1);
+    await createUser(`https://ipfs.io/ipfs/${metadata.ipnft}/metadata.json`, type === 'poet' ? 2 : 1);
 
-    localStorage.setItem('role', type == 'poet' ? 2 : 1)
+    localStorage.setItem('role', type === 'poet' ? 2 : 1)
     localStorage.setItem('username', nickname);
     localStorage.setItem('avatar', `https://ipfs.io/ipfs/${metadata.data.image.pathname.replace('//', '')}`);
 
+    window.location = "/archetypes";
   }
 
   return (

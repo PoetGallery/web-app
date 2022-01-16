@@ -23,7 +23,7 @@ Inspired by “Le Cadavre Exquisite” - it’s a creative experiment where each
         </Box>
         <Box direction="column" basis="1/2" pad="xlarge">
           <Box basis="small">
-            <MetamaskButton />
+            <MetamaskButton alignRight={true} />
           </Box>
 
           <Box flex="grow" align="center" alignSelf="center" alignContent="center" gap="medium" justify="center">

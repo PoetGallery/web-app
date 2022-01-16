@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Option from './pages/Option';
 import SignUp from './pages/SignUp';
 import Rooms from './pages/Rooms';
+import Archetypes from './pages/Archetypes';
 import NoPage from './pages/NoPage';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <Route path="/option" element={<Option/>}/>
             <Route path="/signup/:type" element={<SignUp/>}/>
             <Route path="/rooms" element={<Rooms/>}/>
+            <Route path="/archetypes" element={<Archetypes/>}/>
             <Route path="*" element={<NoPage/>}/>
           </Routes>
         </BrowserRouter>

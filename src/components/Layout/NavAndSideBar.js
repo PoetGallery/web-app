@@ -7,16 +7,16 @@ function NavAndSideBar(props) {
       <Box>
         <Header align="center" alignContent="center" direction="row" pad="medium" background="brand">
 
-          <Box height="xsmall" width="small">
+          <Box height="xxsmall" width="small">
             <Image
                 fit="contain"
-                src="logo_light.svg"
+                src="/logo_light.svg"
             />
           </Box>
 
           <Box gap="medium" align="center" direction="row">
-            <Avatar size="medium" fit="cover" src="alex.jpg"/>
-            <Text>Jabyl</Text>
+            <Avatar size="medium" fit="cover" src={localStorage.getItem("avatar")}/>
+            <Text>{localStorage.getItem("name")}</Text>
             <MetamaskButton/>
           </Box>
         </Header>
